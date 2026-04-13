@@ -1,14 +1,13 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        // Default name
-        String name = "World";
-
-        // Check if user provided a name
-        if (args.length > 0) {
-            name = args[0];
+        
+        if(args.length == 0) {
+            System.out.println("Hello World");
+        } 
+        else {
+            for(String name : args) {
+                System.out.println("Hello " + name);
+            }
         }
-
-        // Display personalized greeting
-        System.out.println("Hello " + name + "!");
     }
 }
